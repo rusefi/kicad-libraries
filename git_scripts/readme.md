@@ -2,6 +2,9 @@ An attempt to make GIT contribution just a little more comfortable
 
 
 ### Contributing to rusEfi start by forking rusEfi repository
+Also important to know that you can only contribute all changes from a branch together.
+So, if you plan some changes you do not want to continute you need to operate on multiple branches,
+not just the default 'master' branch.
 
 
 
