@@ -1,5 +1,10 @@
 An attempt to make GIT contribution just a little more comfortable
 
+
+### Contributing to rusEfi start by forking rusEfi repository
+
+
+
 ### Once you made a local clone of your fork
 
 Please execute *git_add_upstream.bat* ONCE
