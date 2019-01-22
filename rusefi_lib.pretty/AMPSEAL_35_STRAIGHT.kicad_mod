@@ -108,7 +108,7 @@
   (pad "" np_thru_hole circle (at 31.7 -10.8) (size 2 2) (drill 2) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at -33.2 7.3) (size 2 2) (drill 2) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at 33.2 7.3) (size 2 2) (drill 2) (layers *.Cu *.Mask))
-  (model rusefi_lib.3dshapes/AMPSEAL_35_STRAIGHT.wrl
+  (model ${RUSLIB}/3d/AMPSEAL_35_STRAIGHT.wrl
     (at (xyz 0 0 1.35))
     (scale (xyz 393.5 393.5 393.5))
     (rotate (xyz 0 0 0))
