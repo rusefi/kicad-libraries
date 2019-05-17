@@ -1,3 +1,5 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
 #
 # molex_48pin
 #
@@ -58,3 +60,5 @@ X 8 8 550 2250 150 R 50 50 1 1 P
 X 9 9 550 2150 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
+#
+#End Library
