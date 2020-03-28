@@ -1,4 +1,4 @@
-(module Molex_48 locked (layer F.Cu) (tedit 5CD9331A)
+(module Molex_48 locked (layer F.Cu) (tedit 5E7F3E85)
   (descr "Through hole straight socket strip, 2x10, 2.54mm pitch, double cols (from Kicad 4.0.7), script generated")
   (tags "Through hole socket strip THT 2x10 2.54mm double row")
   (fp_text reference U3 (at -10.2997 -7.9248) (layer F.SilkS)
@@ -63,8 +63,8 @@
   (pad "" thru_hole circle (at 4.85 21.3) (size 2.2 2.2) (drill 2.2) (layers *.Cu *.Mask F.SilkS))
   (pad "" thru_hole circle (at 4.85 -21.3) (size 2.2 2.2) (drill 2.2) (layers *.Cu *.Mask F.SilkS))
   (model ${KIPRJMOD}/5007620481.stp
-    (offset (xyz -9.699999999999999 25.5 2.5))
+    (offset (xyz 40.64 5.842 2.49936))
     (scale (xyz 1 1 1))
-    (rotate (xyz -90 0 90))
+    (rotate (xyz -90 0 180))
   )
 )
