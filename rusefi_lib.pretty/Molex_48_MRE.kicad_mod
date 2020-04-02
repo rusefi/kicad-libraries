@@ -1,4 +1,4 @@
-(module Molex_48_MRE (layer F.Cu) (tedit 5E6CA446)
+(module Molex_48_MRE (layer F.Cu) (tedit 5E85C428)
   (descr "Through hole straight socket strip, 2x10, 2.54mm pitch, double cols (from Kicad 4.0.7), script generated")
   (tags "Through hole socket strip THT 2x10 2.54mm double row")
   (fp_text reference U3 (at -16.4846 4.445) (layer F.SilkS)
@@ -507,6 +507,7 @@
   (fp_text user "12V\nRelay" (at -1.524 -2.1336) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.13)) (justify left))
   )
+  (fp_circle (center 14.9098 78.4606) (end 21.2598 78.4606) (layer Eco1.User) (width 0.12))
   (pad J51 thru_hole rect (at 28.1686 19.580809 270) (size 1.6 1.6) (drill 1.15) (layers *.Cu *.Mask))
   (pad J54 thru_hole circle (at 28.1686 27.200809 270) (size 1.6 1.6) (drill 1.15) (layers *.Cu *.Mask))
   (pad J52 thru_hole circle (at 28.1686 22.120809 270) (size 1.6 1.6) (drill 1.15) (layers *.Cu *.Mask))
