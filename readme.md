@@ -12,3 +12,6 @@ this using https://github.com/rusefi/rusefi or other repositories
 .kicad_mod PCB footprint in KiCad 4+ format (looks like usually one footprint in one file)
 
 .mod - PCB footprint prior to KiCad 4 (could be multiple footprints in one file)
+
+.net is technically not a true source file since it's produced from .sch schematics but
+   InteractiveHtmlBOM likes to use these files as input. Open question how does InteractiveHtmlBOM use these .net files exactly? 
