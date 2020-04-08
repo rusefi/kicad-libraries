@@ -1,4 +1,6 @@
 
+See https://github.com/rusefi/hw_modular/tree/master/lowside/gerbers for an example of how things are set.
+
 
 # Bill Of Materials
 
