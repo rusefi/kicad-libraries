@@ -23,7 +23,7 @@ if not exist %lib_path% exit -1
 
 echo "Position file: Translating grom %inputFile% to %outputFile%"
 
-echo "Designator,Mid X,Mid Y,Layer,Rotation"> %outputFile%
+echo Designator,Mid X,Mid Y,Layer,Rotation> %outputFile%
 
 grep -v Package %inputFile% | gawk -F "," '{ sub(/\..*/,"", $6); print $1 "," $4 "mm," $5 "mm,Top," $6}' > %outputFile%.temp
 sed -f %lib_path%/BOM_related/unquote.sed %outputFile%.temp >> %outputFile%
