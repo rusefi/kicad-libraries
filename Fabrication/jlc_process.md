@@ -2,6 +2,8 @@
 See https://github.com/rusefi/hw_modular/tree/master/lowside/gerbers for an example of how things are set.
 
 
+jlc_prepare-*.bat scripts use grep, gawk & sed so Cygwin is required.
+
 # Bill Of Materials
 
 1) See ../BOM_related file for KiCad to produce XXX.csv KiCad BOM.
