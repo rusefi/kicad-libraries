@@ -1,0 +1,6 @@
+[submodule "Fabrication/bom_jlc"]
+	path = Fabrication/bom_jlc
+	url = https://github.com/andreika-git/bom_jlc
+[submodule "Fabrication/InteractiveHtmlBom"]
+	path = Fabrication/InteractiveHtmlBom
+	url = https://github.com/openscopeproject/InteractiveHtmlBom.git
