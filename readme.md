@@ -15,3 +15,6 @@ this using https://github.com/rusefi/rusefi or other repositories
 
 .net is technically not a true source file since it's produced from .sch schematics but
    InteractiveHtmlBOM likes to use these files as input. Open question how does InteractiveHtmlBOM use these .net files exactly? 
+   
+   
+[HOWTO JLC process](Fabrication/jlc_process.md)   
