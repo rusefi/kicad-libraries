@@ -1,4 +1,4 @@
-(module 1123038-2 (layer F.Cu) (tedit 57F22CB7)
+(module 1123038-2 (layer F.Cu) (tedit 5E861C1E)
   (fp_text reference P10 (at 15.24 5.715 90) (layer F.SilkS)
     (effects (font (size 0.889 0.889) (thickness 0.22352)))
   )
@@ -6,6 +6,7 @@
     (effects (font (size 0.889 0.889) (thickness 0.22352)))
   )
   (fp_line (start 0 -16) (end 72.1 -16) (layer F.SilkS) (width 0.381))
+  (fp_line (start 0 12.75334) (end 72.1 12.75334) (layer F.SilkS) (width 0.381))
   (pad 1 thru_hole circle (at 0 0) (size 1.6 1.6) (drill 1.2) (layers *.Cu *.Mask F.SilkS))
   (pad 2 thru_hole circle (at 2.5 0) (size 1.6 1.6) (drill 1.2) (layers *.Cu *.Mask F.SilkS))
   (pad 3 thru_hole circle (at 5 0) (size 1.6 1.6) (drill 1.2) (layers *.Cu *.Mask F.SilkS))
