@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BOSCH_88PIN_02X44
+D BOSCH 88-Pin ECU Connector
+K connector
+$ENDCMP
+#
+#End Doc Library
