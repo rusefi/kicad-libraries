@@ -1,0 +1,21 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Disclaimer
+#
+DEF Disclaimer #G 0 40 Y Y 1 F N
+F0 "G" 0 350 60 H I C CNN
+F1 "Disclaimer" 0 250 60 H I C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+T 0 50 -150 50 0 0 0 "(AKA not for street use). This is " Normal 0 C C
+T 0 0 -350 50 0 0 0 "and equipment." Normal 0 C C
+T 0 0 -50 50 0 0 0 "emissions or safety regulations" Normal 0 C C
+T 0 0 -250 50 0 0 0 "for closed stages, track" Normal 0 C C
+T 0 0 150 50 0 0 0 "FOR OFF ROAD PURPOSES ONLY" Normal 0 C C
+T 0 0 50 50 0 0 0 "This is not for applications with" Normal 0 C C
+ENDDRAW
+ENDDEF
+#
+#End Library
