@@ -17,16 +17,12 @@ export PYTHONPATH="/usr/lib/kicad-nightly/lib/python3/dist-packages"
 function gendiffs() {
   if [ -f "$(dirname "$1")/version.txt" ] && [ $(git rev-list -1 $(git rev-parse HEAD) "$(dirname "$1")/version.txt") = $(git rev-parse HEAD) ]; then
    OLDHASH=$(git rev-list -2 $(git rev-parse HEAD) "$1" | tail -n1 | head -c7)
-    kidiff -w -s Git -b $OLDHASH -a $(git rev-parse --short HEAD) -d :0 $1
-    if [ -d $(dirname "$1")/plots ] && [ -n "$RUSEFI_SSH_SERVER" ]; then
-      tar -czf - $(dirname "$1")/plots/* | sshpass -p "$RUSEFI_SSH_PASS" ssh -o StrictHostKeyChecking=no "$RUSEFI_SSH_USER"@"$RUSEFI_SSH_SERVER" "tar -xzf - -C diffs/plots_$(basename "$1" .kicad_pcb)_release"
-    fi
+    which kidiff -w -s Git -b $OLDHASH -a $(git rev-parse --short HEAD) -d :0 "$1"
   fi
-  kidiff -w -s Git -b $(git rev-parse --short HEAD~1) -a $(git rev-parse --short HEAD) -d :0 $1
-  if [ -d $(dirname "$1")/plots ] && [ -n "$RUSEFI_SSH_SERVER" ]; then
-    tar -czf - $(dirname "$1")/plots/* | sshpass -p "$RUSEFI_SSH_PASS" ssh -o StrictHostKeyChecking=no "$RUSEFI_SSH_USER"@"$RUSEFI_SSH_SERVER" "tar -xzf - -C diffs/plots_$(basename "$1" .kicad_pcb)_release"
-  fi
+  kidiff -w -s Git -b $(git rev-parse --short HEAD~1) -a $(git rev-parse --short HEAD) -d :0 "$1"
 }
 export -f gendiffs
 
-find . -name "*.kicad_pcb" -exec bash -c 'gendiffs "$0"' {} \;
+find . -name "*.kicad_pcb" -not -path "./rusefi_lib/*" -exec bash -c 'gendiffs "$0"' {} \;
+
+tar -czf - ../kidiff/* | sshpass -p "$RUSEFI_SSH_PASS" ssh -o StrictHostKeyChecking=no "$RUSEFI_SSH_USER"@"$RUSEFI_SSH_SERVER" "tar -xzf - -C diffs/"
