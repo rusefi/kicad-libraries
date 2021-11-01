@@ -20,9 +20,12 @@ function gendiffs() {
     which kidiff -w -s Git -b $OLDHASH -a $(git rev-parse --short HEAD) -d :0 "$1"
   fi
   kidiff -w -s Git -b $(git rev-parse --short HEAD~1) -a $(git rev-parse --short HEAD) -d :0 "$1"
+  if [ $(wc -l "../kidiff/hardware/$(dirname "$1")/diff.txt" | cut -d ' ' -f 1) -eq 0 ]; then
+   rm -r "../kidiff/hardware/$(dirname "$1")"
+  fi
 }
 export -f gendiffs
 
 find . -name "*.kicad_pcb" -not -path "./rusefi_lib/*" -exec bash -c 'gendiffs "$0"' {} \;
-
+find ../kidiff -empty -type d -delete
 tar -czf - -C ../kidiff/hardware/ * | sshpass -p "$RUSEFI_SSH_PASS" ssh -o StrictHostKeyChecking=no "$RUSEFI_SSH_USER"@"$RUSEFI_SSH_SERVER" "tar -xzf - -C diffs/"
