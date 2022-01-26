@@ -28,4 +28,4 @@ export -f gendiffs
 
 find . -name "*.kicad_pcb" -not -path "./rusefi_lib/*" -exec bash -c 'gendiffs "$0"' {} \;
 find ../kidiff -empty -type d -delete
-tar -czf - -C ../kidiff/hardware/ * | sshpass -p "$RUSEFI_SSH_PASS" ssh -o StrictHostKeyChecking=no "$RUSEFI_SSH_USER"@"$RUSEFI_SSH_SERVER" "tar -xzf - -C diffs/"
+tar -czf - -C ../kidiff/hardware/ . | sshpass -p "$RUSEFI_SSH_PASS" ssh -o StrictHostKeyChecking=no "$RUSEFI_SSH_USER"@"$RUSEFI_SSH_SERVER" "tar -xzf - -C diffs/"
