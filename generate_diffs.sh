@@ -19,12 +19,12 @@ function gendiffs() {
    OLDHASH=$(git rev-list -2 $(git rev-parse HEAD) "$1" | tail -n1 | head -c7)
     which kidiff -w -s Git -b $OLDHASH -a $(git rev-parse --short HEAD) -d :0 "$1"
   fi
-  kidiff -x -w -s Git -b $(git rev-parse --short HEAD~1) -a $(git rev-parse --short HEAD) -d :0 "$1"
-  if [ -s "kidiff/diff.txt" ]; then
-   mkdir ../kidiff/"$(dirname "$1")"
-   mv kidiff/* ../kidiff/"$(dirname "$1")"
+  kidiff -w -s Git -b $(git rev-parse --short HEAD~1) -a $(git rev-parse --short HEAD) -d :0 "$1"
+  if [ -s "$(dirname "$1")/.kidiff/diff.txt" ]; then
+   mkdir "../kidiff/$(dirname "$1")"
+   mv "$(dirname "$1")"/.kidiff/* "../kidiff/$(dirname "$1")"
   else
-   rm -r kidiff
+   rm -r "$(dirname "$1")/.kidiff"
   fi
 }
 export -f gendiffs
