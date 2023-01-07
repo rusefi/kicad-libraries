@@ -10,7 +10,7 @@
 # which contains index.html. Open that in a web browser and you get a nice visual diff of each layer.
 #!/bin/bash
 
-export PATH="$PATH:$(readlink -f ../KiCad-Diff/)"
+export PATH="$PATH:$(readlink -f ../KiCad-Diff/bin/)"
 export LD_LIBRARY_PATH="/usr/lib/kicad-nightly/lib/x86_64-linux-gnu/"
 export PYTHONPATH="/usr/lib/kicad-nightly/lib/python3/dist-packages"
 
