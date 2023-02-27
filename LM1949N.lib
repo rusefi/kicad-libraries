@@ -1,0 +1,29 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model LM1949N_NOPB
+#/414431/259871/2.49/8/4/Undefined or Miscellaneous
+DEF LM1949N_NOPB U 0 30 Y Y 1 F N
+F0 "U" 1650 300 50 H V L CNN
+F1 "LM1949N_NOPB" 1650 200 50 H V L CNN
+F2 "DIP794W53P254L959H508Q8N" 1650 100 50 H I L CNN
+F3 "http://www.ti.com/lit/gpn/lm1949" 1650 0 50 H I L CNN
+F4 "Texas Instruments LM1949N/NOPB, Peripheral Driver, 8-Pin, MDIP" 1650 -100 50 H I L CNN "Description"
+F5 "5.08" 1650 -200 50 H I L CNN "Height"
+F6 "926-LM1949N/NOPB" 1650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LM1949N-NOPB?qs=X1J7HmVL2ZFT2lBMOd289w%3D%3D" 1650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Texas Instruments" 1650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "LM1949N/NOPB" 1650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X IN 1 0 0 200 R 50 50 0 0 I
+X OUT 2 0 -100 200 R 50 50 0 0 O
+X COMP 3 0 -200 200 R 50 50 0 0 P
+X SENSE_INPUT 4 0 -300 200 R 50 50 0 0 P
+X TIMER 8 1800 0 200 L 50 50 0 0 W
+X SUPPLY 7 1800 -100 200 L 50 50 0 0 W
+X SUPPLY_GND 6 1800 -200 200 L 50 50 0 0 P
+X SENSE_GND 5 1800 -300 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1600 100 1600 -400 200 -400 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library
