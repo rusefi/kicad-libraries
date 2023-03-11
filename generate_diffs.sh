@@ -11,13 +11,11 @@
 #!/bin/bash
 
 export PATH="$PATH:$(readlink -f ../KiCad-Diff/bin/)"
-export LD_LIBRARY_PATH="/usr/lib/kicad-nightly/lib/x86_64-linux-gnu/"
-export PYTHONPATH="/usr/lib/kicad-nightly/lib/python3/dist-packages"
 
 function gendiffs() {
   if [ -f "$(dirname "$1")/version.txt" ] && [ $(git rev-list -1 $(git rev-parse HEAD) "$(dirname "$1")/version.txt") = $(git rev-parse HEAD) ]; then
-   OLDHASH=$(git rev-list -2 $(git rev-parse HEAD) "$1" | tail -n1 | head -c7)
-    which kidiff -w -s Git -b $OLDHASH -a $(git rev-parse --short HEAD) -d :0 "$1"
+    OLDHASH=$(git rev-list -2 $(git rev-parse HEAD) "$1" | tail -n1 | head -c7)
+    kidiff -w -s Git -b $OLDHASH -a $(git rev-parse --short HEAD) -d :0 "$1"
   fi
   kidiff -w -s Git -b $(git rev-parse --short HEAD~1) -a $(git rev-parse --short HEAD) -d :0 "$1"
   if [ -s "$(dirname "$1")/.kidiff/diff.txt" ]; then
