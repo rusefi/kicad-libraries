@@ -24,7 +24,7 @@ function gendiffs() {
    mkdir "../kidiff/$(dirname "$1")"
    mv "$(dirname "$1")"/.kidiff/* "../kidiff/$(dirname "$1")"
   else
-   rm -r "$(dirname "$1")/.kidiff"
+   rm -rf "$(dirname "$1")/.kidiff"
   fi
 }
 export -f gendiffs
